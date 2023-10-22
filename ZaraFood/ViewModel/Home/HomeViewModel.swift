@@ -7,17 +7,20 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 class HomeViewModel{
     
     var repository = HomeRepository()
     var foodList = BehaviorSubject<[Yemekler]>(value: [Yemekler]())
+    var isLoading  = BehaviorRelay(value: false)
     var errorObservable: BehaviorSubject<CustomError?> = BehaviorSubject(value: nil)
-    var disposeBag = DisposeBag()
+    let disposeBag = DisposeBag()
     
     init() {
         bindFoods()
         bindErrors()
+        bindIndicator()
     }
     
     func bindFoods(){
@@ -37,9 +40,25 @@ class HomeViewModel{
             }
             .disposed(by: disposeBag)
     }
+    
+    func bindIndicator(){
+        
+        repository.isLoading.subscribe { loading in
+            self.isLoading.accept(loading)
+        }.disposed(by: disposeBag)
+    }
 
     func getAllFoods(){
         
-        repository.fetchFoods()
+        repository.fetchAndSaveFoods()
+    }
+    
+    func searchFood(query:String){
+        
+        if query.isEmpty{
+            getAllFoods()
+        }else{
+            repository.searchFoods(query: query)
+        }
     }
 }

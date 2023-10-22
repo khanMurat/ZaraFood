@@ -15,19 +15,25 @@
 		FB902EB72ADB23AD00940484 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB902EB62ADB23AD00940484 /* TabbarController.swift */; };
 		FB902EB92ADB36BF00940484 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB902EB82ADB36BF00940484 /* HomeViewController.swift */; };
 		FB902EBB2ADB36CB00940484 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB902EBA2ADB36CB00940484 /* FavoritesViewController.swift */; };
-		FB902EBD2ADB36D600940484 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB902EBC2ADB36D600940484 /* BasketViewController.swift */; };
+		FB902EBD2ADB36D600940484 /* PBasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB902EBC2ADB36D600940484 /* PBasketViewController.swift */; };
 		FB902EC12ADB461F00940484 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB902EC02ADB461F00940484 /* HomeCollectionViewCell.swift */; };
+		FBA9F5082ADDC4E1003443F0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA9F5072ADDC4E1003443F0 /* DetailViewController.swift */; };
+		FBC3DA562AE555A100ACC86E /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3DA552AE555A100ACC86E /* LocalDataSource.swift */; };
+		FBC3DA592AE555EA00ACC86E /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = FBC3DA582AE555EA00ACC86E /* SQLite */; };
+		FBC3DA5B2AE5B56300ACC86E /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3DA5A2AE5B56300ACC86E /* BasketViewController.swift */; };
+		FBC3DA612AE5C98A00ACC86E /* BasketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC3DA602AE5C98A00ACC86E /* BasketCollectionViewCell.swift */; };
 		FBDA65262ADC0388005B24C8 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA65252ADC0388005B24C8 /* FoodModel.swift */; };
 		FBDA65282ADC0400005B24C8 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA65272ADC0400005B24C8 /* Service.swift */; };
 		FBDA652B2ADC0427005B24C8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FBDA652A2ADC0427005B24C8 /* Alamofire */; };
 		FBDA652E2ADC0449005B24C8 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FBDA652D2ADC0449005B24C8 /* SDWebImage */; };
-		FBDA65312ADC0462005B24C8 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBDA65302ADC0462005B24C8 /* RxSwift */; };
 		FBDA65332ADC1043005B24C8 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA65322ADC1043005B24C8 /* CustomError.swift */; };
 		FBDA65352ADC8F22005B24C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA65342ADC8F22005B24C8 /* Constants.swift */; };
 		FBDA65372ADC911B005B24C8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA65362ADC911B005B24C8 /* HomeViewModel.swift */; };
 		FBDA65392ADC97A3005B24C8 /* HomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA65382ADC97A3005B24C8 /* HomeCellViewModel.swift */; };
 		FBDA653B2ADC9AEC005B24C8 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA653A2ADC9AEC005B24C8 /* HomeRepository.swift */; };
 		FBDA653D2ADCA22E005B24C8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDA653C2ADCA22E005B24C8 /* Extensions.swift */; };
+		FBEEEB552AE303B7007BC2A0 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FBEEEB542AE303B7007BC2A0 /* RxCocoa */; };
+		FBEEEB572AE303B7007BC2A0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBEEEB562AE303B7007BC2A0 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +47,12 @@
 		FB902EB62ADB23AD00940484 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		FB902EB82ADB36BF00940484 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FB902EBA2ADB36CB00940484 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		FB902EBC2ADB36D600940484 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		FB902EBC2ADB36D600940484 /* PBasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBasketViewController.swift; sourceTree = "<group>"; };
 		FB902EC02ADB461F00940484 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		FBA9F5072ADDC4E1003443F0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FBC3DA552AE555A100ACC86E /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
+		FBC3DA5A2AE5B56300ACC86E /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		FBC3DA602AE5C98A00ACC86E /* BasketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCollectionViewCell.swift; sourceTree = "<group>"; };
 		FBDA65252ADC0388005B24C8 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		FBDA65272ADC0400005B24C8 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		FBDA65322ADC1043005B24C8 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
@@ -58,8 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBDA65312ADC0462005B24C8 /* RxSwift in Frameworks */,
+				FBC3DA592AE555EA00ACC86E /* SQLite in Frameworks */,
+				FBEEEB552AE303B7007BC2A0 /* RxCocoa in Frameworks */,
 				FBDA652E2ADC0449005B24C8 /* SDWebImage in Frameworks */,
+				FBEEEB572AE303B7007BC2A0 /* RxSwift in Frameworks */,
 				FBDA652B2ADC0427005B24C8 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +112,30 @@
 			path = ZaraFood;
 			sourceTree = "<group>";
 		};
+		FBA9F5062ADDC4C4003443F0 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FBA9F5072ADDC4E1003443F0 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		FBC3DA532AE5556F00ACC86E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FBDA65272ADC0400005B24C8 /* Service.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FBC3DA542AE5557700ACC86E /* Local-SQL */ = {
+			isa = PBXGroup;
+			children = (
+				FBC3DA552AE555A100ACC86E /* LocalDataSource.swift */,
+			);
+			path = "Local-SQL";
+			sourceTree = "<group>";
+		};
 		FBDA653E2ADCAF79005B24C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +149,7 @@
 			children = (
 				FBDA65472ADCB05E005B24C8 /* Tabbar */,
 				FBDA65462ADCB04F005B24C8 /* Home */,
+				FBA9F5062ADDC4C4003443F0 /* Detail */,
 				FBDA65482ADCB067005B24C8 /* Favorites */,
 				FBDA65492ADCB072005B24C8 /* Basket */,
 			);
@@ -138,7 +175,8 @@
 		FBDA65422ADCAF99005B24C8 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				FBDA65272ADC0400005B24C8 /* Service.swift */,
+				FBC3DA542AE5557700ACC86E /* Local-SQL */,
+				FBC3DA532AE5556F00ACC86E /* API */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -200,7 +238,9 @@
 		FBDA65492ADCB072005B24C8 /* Basket */ = {
 			isa = PBXGroup;
 			children = (
-				FB902EBC2ADB36D600940484 /* BasketViewController.swift */,
+				FB902EBC2ADB36D600940484 /* PBasketViewController.swift */,
+				FBC3DA5A2AE5B56300ACC86E /* BasketViewController.swift */,
+				FBC3DA602AE5C98A00ACC86E /* BasketCollectionViewCell.swift */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -224,7 +264,9 @@
 			packageProductDependencies = (
 				FBDA652A2ADC0427005B24C8 /* Alamofire */,
 				FBDA652D2ADC0449005B24C8 /* SDWebImage */,
-				FBDA65302ADC0462005B24C8 /* RxSwift */,
+				FBEEEB542AE303B7007BC2A0 /* RxCocoa */,
+				FBEEEB562AE303B7007BC2A0 /* RxSwift */,
+				FBC3DA582AE555EA00ACC86E /* SQLite */,
 			);
 			productName = ZaraFood;
 			productReference = FB902E9D2ADB224000940484 /* ZaraFood.app */;
@@ -257,7 +299,8 @@
 			packageReferences = (
 				FBDA65292ADC0427005B24C8 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				FBDA652C2ADC0449005B24C8 /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				FBDA652F2ADC0462005B24C8 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				FBEEEB532AE303B7007BC2A0 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				FBC3DA572AE555EA00ACC86E /* XCRemoteSwiftPackageReference "SQLite" */,
 			);
 			productRefGroup = FB902E9E2ADB224000940484 /* Products */;
 			projectDirPath = "";
@@ -286,19 +329,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBC3DA5B2AE5B56300ACC86E /* BasketViewController.swift in Sources */,
 				FB902EC12ADB461F00940484 /* HomeCollectionViewCell.swift in Sources */,
 				FBDA65392ADC97A3005B24C8 /* HomeCellViewModel.swift in Sources */,
 				FBDA65352ADC8F22005B24C8 /* Constants.swift in Sources */,
-				FB902EBD2ADB36D600940484 /* BasketViewController.swift in Sources */,
+				FB902EBD2ADB36D600940484 /* PBasketViewController.swift in Sources */,
 				FB902EA12ADB224000940484 /* AppDelegate.swift in Sources */,
 				FBDA65262ADC0388005B24C8 /* FoodModel.swift in Sources */,
 				FB902EB72ADB23AD00940484 /* TabbarController.swift in Sources */,
+				FBA9F5082ADDC4E1003443F0 /* DetailViewController.swift in Sources */,
+				FBC3DA562AE555A100ACC86E /* LocalDataSource.swift in Sources */,
 				FBDA65332ADC1043005B24C8 /* CustomError.swift in Sources */,
 				FBDA653B2ADC9AEC005B24C8 /* HomeRepository.swift in Sources */,
 				FBDA65372ADC911B005B24C8 /* HomeViewModel.swift in Sources */,
 				FBDA653D2ADCA22E005B24C8 /* Extensions.swift in Sources */,
 				FBDA65282ADC0400005B24C8 /* Service.swift in Sources */,
 				FB902EA32ADB224000940484 /* SceneDelegate.swift in Sources */,
+				FBC3DA612AE5C98A00ACC86E /* BasketCollectionViewCell.swift in Sources */,
 				FB902EBB2ADB36CB00940484 /* FavoritesViewController.swift in Sources */,
 				FB902EB92ADB36BF00940484 /* HomeViewController.swift in Sources */,
 			);
@@ -455,6 +502,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,6 +531,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -520,6 +569,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FBC3DA572AE555EA00ACC86E /* XCRemoteSwiftPackageReference "SQLite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.1;
+			};
+		};
 		FBDA65292ADC0427005B24C8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -536,7 +593,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		FBDA652F2ADC0462005B24C8 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		FBEEEB532AE303B7007BC2A0 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
@@ -547,6 +604,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FBC3DA582AE555EA00ACC86E /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBC3DA572AE555EA00ACC86E /* XCRemoteSwiftPackageReference "SQLite" */;
+			productName = SQLite;
+		};
 		FBDA652A2ADC0427005B24C8 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FBDA65292ADC0427005B24C8 /* XCRemoteSwiftPackageReference "Alamofire" */;
@@ -557,9 +619,14 @@
 			package = FBDA652C2ADC0449005B24C8 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
-		FBDA65302ADC0462005B24C8 /* RxSwift */ = {
+		FBEEEB542AE303B7007BC2A0 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FBDA652F2ADC0462005B24C8 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = FBEEEB532AE303B7007BC2A0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		FBEEEB562AE303B7007BC2A0 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBEEEB532AE303B7007BC2A0 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

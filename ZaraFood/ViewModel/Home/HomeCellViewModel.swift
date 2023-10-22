@@ -26,4 +26,6 @@ struct HomeCellViewModel {
     var foodImageURL: URL? {
         return URL(string: "\(IMAGE_URL)\(food.yemekResimAdi)")
     }
+    
+   
 }

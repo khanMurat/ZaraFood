@@ -16,6 +16,7 @@ struct FoodModel: Codable {
 // MARK: - Yemekler
 struct Yemekler: Codable {
     let yemekID, yemekAdi, yemekResimAdi, yemekFiyat: String
+    var isFavorite : Bool = false
 
     enum CodingKeys: String, CodingKey {
         case yemekID = "yemek_id"

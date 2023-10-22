@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class HomeViewController: UIViewController {
     
@@ -21,7 +22,7 @@ class HomeViewController: UIViewController {
             collectionView.reloadData()
         }
     }
-    
+    private var index : IndexPath?
     private var viewModel: HomeViewModel!
     private let disposeBag = DisposeBag()
 
@@ -41,6 +42,8 @@ class HomeViewController: UIViewController {
         configureSearchField()
         configureNavigationBar()
         configureCollectionView(itemCount: 2, spacing: 0.5)
+        
+        indicator.hidesWhenStopped = true
     }
     
     private func configureSearchField() {
@@ -65,6 +68,7 @@ class HomeViewController: UIViewController {
         design.itemSize = CGSize(width: itemWidth, height: itemWidth * 2)
         
         collectionView.collectionViewLayout = design
+        collectionView.keyboardDismissMode = .interactive
     }
     
     // MARK: - ViewModel Setup & Binding
@@ -77,20 +81,28 @@ class HomeViewController: UIViewController {
         viewModel.foodList
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] foods in
-                self?.indicator.stopAnimating()
                 self?.foodList = foods
             })
             .disposed(by: disposeBag)
-        
+
         viewModel.errorObservable
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] error in
                 if error != nil {
                     self?.showErrorAlert(error: error!)
-                    self?.indicator.stopAnimating()
                 }
             })
             .disposed(by: disposeBag)
+        
+        viewModel.isLoading.bind(to: indicator.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
+        let _ = searchField.rx.text.orEmpty
+            .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] query in
+                self?.viewModel.searchFood(query: query)
+            }).disposed(by: disposeBag)
     }
 
     // MARK: - Actions
@@ -101,7 +113,15 @@ class HomeViewController: UIViewController {
     
     @IBAction func fourGridButtonPressed(_ sender: UIBarButtonItem) {
         configureCollectionView(itemCount: 3, spacing: 1)
-        print(foodList.count)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailVC"{
+            
+            let nav = segue.destination as! UINavigationController
+            let vc = nav.topViewController as! DetailViewController
+            vc.food = foodList[index?.row ?? 0]
+        }
     }
 }
 
@@ -116,5 +136,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! HomeCollectionViewCell
         cell.viewModel = HomeCellViewModel(food: foodList[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        index = indexPath
+        performSegue(withIdentifier: "toDetailVC", sender: nil)
+        
     }
 }

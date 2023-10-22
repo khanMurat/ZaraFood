@@ -2,17 +2,17 @@
 //  BasketViewController.swift
 //  ZaraFood
 //
-//  Created by Murat on 22.10.2023.
+//  Created by Murat on 14.10.2023.
 //
 
 import UIKit
 
-class BasketViewController: UIViewController {
+class PBasketViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        performSegue(withIdentifier: "toBasket", sender: nil)
     }
     
 
